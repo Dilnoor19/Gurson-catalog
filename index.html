@@ -18,7 +18,7 @@
             --text-color: #263238;
             --border-color: #e0e0e0;
             --shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
-            --hover-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+            --hover-shadow: 0 4px 8px rgba(0, 0, 0, 极速飞艇计划群公众号飞飞|0.12);
             --highlight-bg: #fff8e1;
             --highlight-text: #5d4037;
             --whatsapp: #25D366;
@@ -58,13 +58,14 @@
         .header-content {
             display: flex;
             justify-content: space-between;
-            align-items: center;
+            align-items: flex-start;
         }
 
         .logo-container {
             display: flex;
             align-items: center;
             gap: 8px;
+            flex-shrink: 0;
         }
 
         .logo-img {
@@ -95,6 +96,8 @@
 
         .company-info {
             text-align: right;
+            flex-shrink: 1;
+            min-width: 0;
         }
 
         .company-info h3 {
@@ -363,7 +366,7 @@
 
         .footer-content {
             display: grid;
-            grid-template-columns: 1fr;
+            grid-template-columns: 1;
             gap: 15px;
         }
 
@@ -394,26 +397,20 @@
         @media (max-width: 768px) {
             .header-content {
                 flex-direction: row;
-                text-align: left;
-                gap: 10px;
                 align-items: flex-start;
+                gap: 10px;
             }
             
             .logo-container {
-                flex: 1;
-                justify-content: flex-start;
-                text-align: left;
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 4px;
+                flex: 0 0 auto;
+                flex-direction: row;
+                gap: 8px;
             }
             
             .company-info {
                 text-align: right;
                 flex: 1;
-                display: flex;
-                flex-direction: column;
-                justify-content: flex-start;
+                min-width: 0;
             }
             
             .company-phone {
@@ -446,9 +443,9 @@
                 height: 35px;
             }
             
-            /* Hide the address separator on mobile */
-            .company-info p:nth-child(4) {
-                display: none;
+            /* Show all address lines on mobile */
+            .company-info p {
+                display: block !important;
             }
             
             .products-grid {
@@ -486,7 +483,7 @@
                 width: 40px;
                 height: 40px;
                 font-size: 1rem;
-            }
+           }
             
             .whatsapp-button {
                 bottom: 65px;
@@ -517,11 +514,7 @@
             }
             
             .logo-container {
-                gap: 2px;
-            }
-            
-            .company-info p:nth-child(3) {
-                display: none;
+                gap: 6px;
             }
         }
 
@@ -570,7 +563,9 @@
                 </div>
                 <div class="company-info">
                     <h3>Our Address</h3>
-                    <p>145/18, Sehdev Malhotra Marg,Near Fire Stone Building,\nNear Fire Stone Building,Kashmere Gate, Delhi - 110006</p>
+                    <p>145/18, Sehdev Malhotra Marg,</p>
+                    <p>Near Fire Stone Building,</p>
+                    <p>Kashmere Gate, Delhi - 110006</p>
                     <p>_______________________</p>
                     <div class="company-phone">
                         <i class="fas fa-phone"></i>
@@ -609,7 +604,7 @@
 
     <!-- WhatsApp Button -->
     <a href="https://wa.me/919891348222?text=Hello%20Gurson%20Automobiles,%20I%20would%20like%20to%20inquire%20about%20your%20products" class="whatsapp-button" target="_blank">
-        <i class="fab fa-whatsapp"></i>
+        <i class="fab fa-whatsapp"></极速飞艇计划群公众号飞飞|i>
     </a>
 
     <!-- Footer -->
@@ -621,7 +616,7 @@
                     <p><i class="fas fa-phone"></i> +91 9891348222</p>
                     <p><i class="fab fa-whatsapp"></i> +91 9891348222</p>
                     <p><i class="fas fa-clock"></i> Mon-Sat: 9AM - 6PM</p>
-                </div>
+                </极速飞艇计划群公众号飞飞|div>
                 <div class="footer-section">
                     <h3>Our Address</h3>
                     <p>145/18, Sehdev Malhotra Marg,</p>
@@ -1827,5 +1822,3 @@
     </script>
 </body>
 </html>
-
-
